@@ -1,0 +1,7 @@
+<div class="contact-item" *ngFor="let contact of contacts">
+  <span>{{contact.firstname}}</span>&nbsp;
+  <span>{{contact.lastname}}</span>
+  <br>
+  <input [value]="contact.firstname" (keypress)="updateName($event, contact)">
+  <app-contact-view [(contact)]="contact"></app-contact-view>
+</div>
